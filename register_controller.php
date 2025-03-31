@@ -1,9 +1,5 @@
 <?php
-
-$host = 'localhost';
-$dbname = 'example';
-$username = 'root';
-$password = '';
+include "controller.php";
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
