@@ -1,0 +1,170 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: black;
+}
+
+/* Flex container for layout */
+.container {
+    display: flex;
+    align-items: center;
+    gap: 100px; /* Space between elements */
+    width: 90%;
+    max-width: 1200px;
+}
+
+/* Logo Styling - Properly Positioned to the Left */
+.logo {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start; /* Align logo to the left */
+}
+
+.logo img {
+    width: 120px;
+    height: auto;
+}
+
+.calendar-title {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    margin-top: 70px;
+    margin-left: -90px;
+}
+
+
+/* Calendar Wrapper */
+.calendar-wrapper {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+}
+
+/* Calendar Styles */
+.calendar {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 30px #222222;
+    color: black;
+    padding: 20px;
+    font-size: 20px;
+    width: 500px;
+    height: auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.btn {
+    cursor: pointer;
+}
+
+#month-year {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.weekdays {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    padding: 10px 0;
+}
+
+.days {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 240px;
+}
+
+.weekdays div, .days div {
+    width: 14.28%;
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 5px;
+}
+
+.days div {
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.days div:hover {
+    background-color: white;
+    color: skyblue;
+}
+
+.days div.selected {
+    background-color: skyblue !important;
+    color: white !important;
+    font-weight: bold;
+}
+
+/*.days .today {
+    background-color: skyblue;
+    color: white;
+}*/
+
+.days .fade {
+    color: darkgray;
+}
+
+/* Controls for AM/PM Selection - Properly Positioned to the Right */
+.controls {
+    flex: 1;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.time-slot {
+    background: white;
+    color: black;
+    font-size: 20px;
+    border: none;
+    padding: 20px 30px;
+    margin: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100px;
+}
+
+.time-slot.active {
+    background: skyblue;
+}
+
+.confirm-btn {
+    display: block;
+    width: 120px;
+    font-size: 20px;
+    margin-top: 10px;
+    background: white;
+    color: black;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.confirm-btn:hover {
+    background: skyblue;
+    color: black;
+}
